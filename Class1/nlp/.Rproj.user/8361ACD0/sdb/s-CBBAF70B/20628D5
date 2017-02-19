@@ -1,0 +1,28 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1482061088649.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "20628D5",
+    "lastKnownWriteTime" : 8237135842183741439,
+    "last_content_update" : 1482061088649,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "o33ub9jjac",
+        "caption" : "alice1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=alice1&cache_key=o33ub9jjac",
+        "displayedObservations" : "397",
+        "environment" : "",
+        "object" : "alice1",
+        "totalObservations" : "397",
+        "variables" : "3"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,12 @@
+# Compare Python code and R code for Class Presentation.
+dur <- read.csv("duration.csv", sep = ";")
+attach(dur)
+hist(duration, col="blue")
+plot(duration~experiment, col="blue")
+mean(duration)
+sd(duration)
+var(duration)
+summary(duration)
+tapply(duration,experiment,mean)
+sd(duration)
+sqrt(mean(abs(duration-mean(duration))^2))
