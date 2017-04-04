@@ -1,0 +1,328 @@
+# Set the article class
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [12pt]
+
+# No need for a table of contents, unless your paper is quite long.
+#+OPTIONS: toc:nil
+
+
+# Use fancy looking fonts. If you don't have MinionPro installed,
+# a good alternative is the Palatino-style pxfonts.
+# See: http://www.tug.dk/FontCatalogue/pxfonts/
+
+#+LATEX_HEADER: \usepackage[scaled=.875]{inconsolata}
+
+# Set the spacing to double, as required in most papers.
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \doublespacing
+
+# Fix the margins
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+
+# This line makes lists work better:
+# It eliminates whitespace before/within a list and pushes it tt the left margin
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist[enumerate,itemize]{noitemsep,nolistsep,leftmargin=*}
+
+# I always include this for my bibliographies
+#+LATEX_HEADER: \usepackage[notes,isbn=false,backend=biber]{biblatex-chicago}
+#+LATEX_HEADER: \addbibresource{/Users/clarkdonley/Files/Academic/Bibliography/main.bib}
+
+#+TITLE: Prosody and emotion: Towards the development of an emotional agent
+#+AUTHOR: Supervisor: Charalambos (Haris) Themistocleous
+#+DATE: February 21, 2017
+
+* Goal
+
+To explore  prosody as  a communicative channel,  that conveys  both linguistic,
+social, and  emotional meanings  and to  provide a  classification model  of the
+emotional properties  of speech,  using multimodal  information from  the speech
+signal, e.g.,  information about the duration,  fundamental frequency, formants,
+and voice quality.
+
+* Background
+Emotional   communicative  agents   rely   on  prosodic   information  for   the
+identification  of  emotional states.  Previous  research  using such  emotional
+robots has  demonstrated robust techniques  for identifying affective  intent in
+robot  directed speech.  For example,  by analyzing  the prosody  of a  person’s
+speech, robots, such as Kismet and Leonardo, can determine whether the robot was
+scolded, praised, or given an attentional bid.
+
+Most importantly,  the robot  can discern these  affective intents  from neutral
+indifferent speech. Nevertheless, much more work needs to be done to explore the
+potentials of prosodic  information in speech interaction  under a computational
+framework.  These models  may potentially  be included  in robots  and discourse
+agents, such as personal assistants.
+
+* Problem description
+The aims of this work include the following:
+
+- to study the literature on prosody and emotion.
+- to identify the prosodic categories in speech corpora.
+- to train on corpora developed for this purpose and assess the performance of the classifier on existing prosodic corpora.
+
+* Recommended skills
+Classification/Machine learning Python, R
+
+* Process
+** Literature
+
+*** Works that deal with the application of Emotional Prosody.
+
+
+** What do we want to do?
+*** Research Question?
+ Creating an application that detect emotions in spoken texts. 
+
+*** Defining Research Hypotheses
+ What do we expect based on the previous literature?
+
+
+* Experimental Work
+Create a setting that conveys two or more different emotions:
+
+1. Context: What phrase can be a good context to detect a happiness or sadness?
+10 utterances that convey happiness.
+10 utterances that convey sadness.
+
+2. Speakers
+Record at least 5-15 speakers 
+Speakers must have most properties in common.
+
+3. Extracting features from Sound
+Features that can be interesting from the point of view of prosody are:
+
+- F0
+- Formants
+- Duration
+- Pauses
+
+4. Tools for analyzing speech signals
+- Praat
+- Python
+- R
+
+5. Analysis
+- Train a machine learning classification that can identify Sadness vs. Happiness.
+- What can be the most optimal algorithm?
+
+* References
+** Works on Emotional Prosody.
+    Abelin, Å. (2008). Seeing glee but hearing fear? emotional McGurk effect in Swedish. /Paper presented at the Proceedings of the 4th International Conference on Speech Prosody/, SP 2008.
+
+Acosta, J. C., & Ward, N. G. (2011). Achieving rapport with turn-by-turn, user-responsive emotional coloring. Speech Communication, 53(9-10), 1137-1148. doi:10.1016/j.specom.2010.11.006
+
+Airas, M., & Alku, P. (2006). Emotions in vowel segments of continuous speech: Analysis of the glottal flow using the normalised amplitude quotient. Phonetica: International Journal of Speech Science, 63(1), 26-46. 
+
+Alam, M. J., Attabi, Y., Dumouchel, P., Kenny, P., & O'Shaughnessy, D. (2013). Amplitude modulation features for emotion recognition from speech. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Arias, J. P., Busso, C., & Yoma, N. B. (2013). Energy and F0 contour modeling with functional data analysis for emotional speech detection. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Arias, J. P., Busso, C., & Yoma, N. B. (2014). Shape-based modeling of the fundamental frequency contour for emotion detection in speech. Computer Speech and Language, 28(1), 278-294. 
+
+Arimoto, Y., & Okanoya, K. (2013). Individual differences of emotional expression in speaker's behavioral and autonomic responses. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Bänziger, T., & Scherer, K. R. (2005). The role of intonation in emotional expressions. Speech Communication, 46, 252-267. doi:10.1016/j.specom.2005.02.016
+
+Barkhuysen, P., Krahmer, E., & Swerts, M. (2010). Crossmodal and incremental perception of audiovisual cues to emotional speech. Language and Speech, 53(1), 3-30. doi:10.1177/0023830909348993
+
+Barra-Chicote, R., Yamagishi, J., King, S., Montero, J. M., & Macias-Guarasa, J. (2010). Analysis of statistical parametric and unit selection speech synthesis systems applied to emotional speech. Speech Communication, 52(5), 394-404. doi:10.1016/j.specom.2009.12.007
+
+Batliner, A., Fischer, K., Huber, R., Spilker, J., & Nöth. (2000). Desperately Seeking Emotions: Actors, Wizards, and Human Beings.
+
+Batliner, A., Huber, R., Niemann, H., Nöth, E., Spilker, J., & Fischer, K. (2000). The Recognition of Emotion. In W. Wahlster (Ed.), Verbmobil: Foundations of Speech-to-Speech Translation (pp. 122-130). Berlin: Springer.
+
+Benders, T. (2013). Mommy is only happy! Dutch mothers' realisation of speech sounds in infant-directed speech expresses emotion, not didactic intent. Infant Behavior and Development, 36(4), 847-862. doi:10.1016/j.infbeh.2013.09.001
+
+Benus, S., Gravano, A., & Hirschberg, J. (2007). Prosody, emotions, and... 'whatever', Antwerp.
+
+Biersack, S., & Kempe, V. (2005). Exploring the influence of vocal emotion expression on communicative effectiveness. Phonetica: International Journal of Speech Science, 62(2-4), 106-119. 
+
+Bozkurt, E., Erzin, E., Erdem, C. E., & Erdem, A. T. (2011). Formant position based weighted spectral features for emotion recognition. Speech Communication, 53(9-10), 1186-1197. doi:10.1016/j.specom.2011.04.003
+
+Callejas, Z., & López-Cózar, R. (2008). Influence of contextual information in emotion annotation for spoken dialogue systems. Speech Communication, 50(5), 416-433. doi:10.1016/j.specom.2008.01.001
+
+Cao, H., Verma, R., & Nenkova, A. (2015). Speaker-sensitive emotion recognition via ranking: Studies on acted and spontaneous speech. Computer Speech and Language, 29(1), 186-202. 
+
+Chafe, W. (2001). Prosody and emotion in a sample of real speech. In P. H. Fries, M. Cummings, D. Lockwood, & W. Spruiell (Eds.), Relations and functions within and around language. London: Continuum Press.
+
+Chiou, B. C., & Chen, C. P. (2014). Speech emotion recognition with cross-lingual databases. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Chuenwattanapranithi, S., Xu, Y., Thipakorn, B., & Maneewongvatana, S. (2008). Encoding emotions in speech with the size code: A perceptual investigation. Phonetica: International Journal of Speech Science, 65(4), 210-230. 
+
+Cohen, A. S., Lee Hong, S., & Guevara, A. (2010). Understanding emotional expression using prosodic analysis of natural speech: Refining the methodology. Journal of Behavior Therapy and Experimental Psychiatry, 41(2), 150-157. doi:10.1016/j.jbtep.2009.11.008
+
+Douglas-Cowie, E., Cowie, R., & Campbell, N. (2003). Speech and emotion. Speech Communication, 40(1-2), 1-3. doi:10.1016/S0167-6393(03)00058-X
+
+Erickson, D., Fujimura, O., & Pardo, B. (1998). Articulatory Correlates of Prosodic Control: Emotion and Emphasis. Language and Speech, 41(3-4), 399-417. 
+
+Fang, R. Y., Chen, B. W., Wang, J. F., & Wu, C. H. (2011). Emotion detection based on concept inference and spoken sentence analysis for customer service, Florence.
+
+Gangamohan, P., Kadiri, S. R., Gangashetty, S. V., & Yegnanarayana, B. (2014). Excitation source features for discrimination of anger and happy emotions. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Gangamohan, P., Kadiri, S. R., & Yegnanarayana, B. (2013). Analysis of emotional speech at subsegmental level. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Ghazi, D., Inkpen, D., & Szpakowicz, S. (2014). Prior and contextual emotion of words in sentential context. Computer Speech and Language, 28(1), 76-92. 
+
+Gobl, C., & Ní Chasaide, A. (2003). The role of voice quality in communicating emotion, mood and attitude. Speech Communication, 40(1-2), 189-212. doi:10.1016/S0167-6393(02)00082-1
+
+Goudbeek, M., & Broersma, M. (2010). Language specific effects of emotion on phoneme duration, Makuhari, Chiba.
+
+Govind, D., Prasanna, S. R. M., & Yegnanarayana, B. (2011). Neutral to target emotion conversion using source and suprasegmental information, Florence.
+
+Greasley, P., Sherrard, C., & Waterman, M. (2000). Emotion in language and speech: Methodological issues in naturalistic approaches. Language and Speech, 43(4), 355-375. 
+
+Hassan, A., & Damper, R. I. (2012). Classification of emotional speech using 3DEC hierarchical classifier. Speech Communication, 54(7), 903-916. doi:10.1016/j.specom.2012.03.003
+
+Hirose, K., Sato, K., Asano, Y., & Minematsu, N. (2005). Synthesis of F 0 contours using generation process model parameters predicted from unlabeled corpora: Application to emotional speech synthesis. Speech Communication, 46(3-4), 385-404. doi:10.1016/j.specom.2005.03.014
+
+Hsu, C., & Xu, Y. (2014). Can adolescents with autism perceive emotional prosody? Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Hübner, D., Vlasenko, B., Grosser, T., & Wendemuth, A. (2010). Determining optimal features for emotion recognition from speech by applying an evolutionary algorithm, Makuhari, Chiba.
+
+Inanoglu, Z., & Young, S. (2009). Data-driven emotion conversion in spoken English. Speech Communication, 51(3), 268-283. doi:10.1016/j.specom.2008.09.006
+
+Jaywant, A., & Pell, M. D. (2012). Categorical processing of negative emotions from speech prosody. Speech Communication, 54(1), 1-10. 
+
+Jeon, J. H., Le, D., Xia, R., & Liu, Y. (2013). A preliminary study of cross-lingual emotion recognition from speech: Automatic classification versus human perception. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Kagomiya, T., & Nakagawa, S. (2013). Evaluation of a bone-conducted ultrasonic hearing aid in vocal emotion transmission. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Karami, S., & Bagheri, M. (2014). Opertionalizing teachers' emotional attitudes towards their students, colleagues and workplace result from an EFL context. Journal of Language and Literature, 5(1), 96-107. 
+
+Kim, J., Erickson, D., Lee, S., & Narayanan, S. S. (2014). A study of invariant properties and variation patterns in the Converter/Distributor model for emotional speech. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Kim, J., Lee, S., & Narayanan, S. (2010). A study of interplay between articulatory movement and prosodic characteristics in emotional speech production, Makuhari, Chiba.
+
+Kim, J., Lee, S., & Narayanan, S. (2011). An exploratory study of the relations between perceived emotion strength and articulatory kinematics, Florence.
+
+Kiss, G., & Van Santen, J. (2010). Automated vocal emotion recognition using phoneme class specific features, Makuhari, Chiba.
+
+Kitahara, K., Michiwiki, S., Sato, M., Matsunaga, S., Yamashita, M., & Shinohara, K. (2011). Emotion classification of infants' cries using duration ratios of acoustic segments, Florence.
+
+Kitamura, T. (2010). Similarity of effects of emotions on the speech organ configuration with and without speaking, Makuhari, Chiba.
+
+Kockmann, M., Burget, L., & Honza Černocký, J. (2011). Application of speaker- and language identification state-of-the-art techniques for emotion recognition. Speech Communication, 53(9-10), 1172-1185. doi:10.1016/j.specom.2011.01.007
+
+Laukkanen, A. M., Vilkman, E., Alku, P., & Oksanen, H. (1996). Physical variations related to stress and emotional state: A preliminary study. Journal of Phonetics, 24(3), 313-335. 
+
+Lee, C. C., Mower, E., Busso, C., Lee, S., & Narayanan, S. (2011). Emotion recognition using a hierarchical binary decision tree approach. Speech Communication, 53(9-10), 1162-1171. doi:10.1016/j.specom.2011.06.004
+
+Lin, J. C., Wu, C. H., & Wei, W. L. (2013). Emotion recognition of conversational affective speech using temporal course modeling. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Liu, G., Lei, Y., & Hansen, J. H. L. (2010). A novel feature extraction strategy for multi-stream robust emotion identification, Makuhari, Chiba.
+
+López-Cózar, R., Silovsky, J., & Kroul, M. (2011). Enhancement of emotion detection in spoken dialogue systems by combining several information sources. Speech Communication, 53(9-10), 1210-1228. doi:10.1016/j.specom.2011.01.006
+
+Mariooryad, S., Lotfian, R., & Busso, C. (2014). Building a naturalistic emotional speech corpus by retrieving expressive behaviors from existing speech corpora. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Martínez-Castilla, P., & Peppé, S. (2008). Intonation features of the expression of emotions in Spanish: Preliminary study for a prosody assessment procedure. Clinical Linguistics and Phonetics, 22(4-5), 363-370. doi:10.1080/02699200801919802
+
+Milton, A., & Tamil Selvi, S. (2014). Class-specific multiple classifiers scheme to recognize emotions from speech signals. Computer Speech and Language, 28(3), 727-742. 
+
+Mori, S., Moriyama, T., & Ozawa, S. (2006). Emotional speech synthesis using subspace constraints in prosody. Paper presented at the 2006 IEEE International Conference on Multimedia and Expo, ICME 2006 - Proceedings.
+
+Moriyama, T., Saito, H., & Ozawa, S. (2001). Evaluation of the relation between emotional concepts and emotional parameters in speech. Systems and Computers in Japan, 32(3), 56-64. doi:10.1002/1520-684X(200103)32:3<56::AID-SCJ5>3.0.CO;2-B
+
+Morrison, D., Wang, R., & De Silva, L. C. (2007). Ensemble methods for spoken emotion recognition in call-centres. Speech Communication, 49(2), 98-112. doi:10.1016/j.specom.2006.11.004
+
+Mullennix, J. W., Bihon, T., Bricklemyer, J., Gaston, J., & Keener, J. M. (2002). Effects of variation in emotional tone of voice on speech perception. Language and Speech, 45(3), 255-283. 
+
+Murray, I. R., & Arnott, J. L. (2008). Applying an analysis of acted vocal emotions to improve the simulation of synthetic speech. Computer Speech & Language, 22(2), 107-129. doi:http://dx.doi.org/10.1016/j.csl.2007.06.001
+
+Mustafa, M. B., & Ainon, R. N. (2013). Emotional speech acoustic model for Malay: Iterative versus isolated unit training. Journal of the Acoustical Society of America, 134(4), 3057-3066. 
+
+Navas, E., Hernáez, I., Luengo, I., Sainz, I., Saratxaga, I., & Sanchez, J. (2007) Meaningful parameters in emotion characterisation. Vol. 4775 LNAI. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) (pp. 74-84).
+
+Nilsenová, M., Goudbeek, M., & Kempen, L. (2010). The relation between pitch perception preference and emotion identification, Makuhari, Chiba.
+
+Nomoto, N., Masataki, H., Yoshioka, O., & Takahashi, S. (2010). Detection of anger emotion in dialog speech using prosody feature and temporal relation of utterances, Makuhari, Chiba.
+
+Nwe, T. L., Foo, S. W., & De Silva, L. C. (2003). Speech emotion recognition using hidden Markov models. Speech Communication, 41(4), 603-623. doi:10.1016/S0167-6393(03)00099-2
+
+Nwe, T. L., Hieu, N. T., & Limbu, D. K. (2013). Bhattacharyya distance based emotional dissimilarity measure in multi-dimensional space for emotion classification. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Patel, S., & Shrivastav, R. (2011). A preliminary model of emotional prosody using multidimensional scaling, Florence.
+
+Paulmann, S., Seifert, S., & Kotz, S. A. (2010). Orbito-frontal lesions cause impairment during late but not early emotional prosodic processing. Social Neuroscience, 5(1), 59-75. doi:10.1080/17470910903135668
+
+Paulmann, S., Titone, D., & Pell, M. D. (2012). How emotional prosody guides your way: Evidence from eye movements. Speech Communication, 54(1), 92-107. doi:10.1016/j.specom.2011.07.004
+
+Pell, M. D., Paulmann, S., Dara, C., Alasseri, A., & Kotz, S. A. (2009). Factors in the recognition of vocally expressed emotions: A comparison of four languages. Journal of Phonetics, 37(4), 417-435. 
+
+Pell, M. D., & Skorup, V. (2008). Implicit processing of emotional prosody in a foreign versus native language. Speech Communication, 50(6), 519-530. doi:10.1016/j.specom.2008.03.006
+
+Pittam, J., Gallois, C., & Callan, V. (1990). The long-term spectrum and perceived emotion. Speech Communication, 9(3), 177-187. 
+
+Pohjalainen, J., & Alku, P. (2013). Extended weighted linear prediction using the autocorrelation snapshot - A robust speech analysis method and its application to recognition of vocal emotions. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Polzehl, T., Sundaram, S., Ketabdar, H., Wagner, M., & Metze, F. (2009). Emotion Classification in Children ’ s Speech Using Fusion of Acoustic and Linguistic Features. Proc Interspeech.
+
+Prasanna, S. R. M., & Govind, D. (2010). Analysis of excitation source information in emotional speech, Makuhari, Chiba.
+
+Přibilová, A., & Přibil, J. (2009) Spectrum modification for emotional speech synthesis. Vol. 5398 LNAI. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) (pp. 232-241).
+
+Salvi, G., Tesser, F., Zovato, E., & Cosi, P. (2010). Cluster analysis of differential spectral envelopes on emotional speech, Makuhari, Chiba.
+
+Sanchez, M. H., Tur, G., Ferrer, L., & Hakkani-Tür, D. (2010). Domain adaptation and compensation for emotion detection, Makuhari, Chiba.
+
+Scherer, K. R. (2003). Vocal communication of emotion: A review of research paradigms. Speech Communication, 40(1-2), 227-256. doi:10.1016/S0167-6393(02)00084-5
+
+Scherer, K. R. (2013). Vocal markers of emotion: Comparing induction and acting elicitation. Computer Speech & Language, 27(1), 40-58. doi:http://dx.doi.org/10.1016/j.csl.2011.11.003
+
+Schuller, B., Batliner, A., & Steidl, S. (2011). Introduction to the special issue on sensing emotion and affect - Facing realism in speech processing. Speech Communication, 53(9-10), 1059-1061. doi:10.1016/j.specom.2011.07.003
+
+Schuller, B., Batliner, A., Steidl, S., & Seppi, D. (2011). Recognising realistic emotions and affect in speech: State of the art and lessons learnt from the first challenge. Speech Communication, 53(9-10), 1062-1087. doi:10.1016/j.specom.2011.01.011
+10.3389/fnsys.2010.00006;
+
+Schuller, B., Steidl, S., Batliner, A., Vinciarelli, A., Scherer, K., Ringeval, F., . . . Kim, S. (2013). The INTERSPEECH 2013 computational paralinguistics challenge: Social signals, conflict, emotion, autism. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Shami, M., & Verhelst, W. (2007). An evaluation of the robustness of existing supervised machine learning approaches to the classification of emotions in speech. Speech Communication, 49(3), 201-212. doi:10.1016/j.specom.2007.01.006
+
+Suzuki, M., Nakagawa, S., & Kita, K. (2012) Prosodic feature normalization for emotion recognition by using synthesized speech. Vol. 243. Frontiers in Artificial Intelligence and Applications (pp. 306-313).
+
+Suzuki, M., Nakagawa, S., & Kita, K. (2013). Emotion recognition method based on normalization of prosodic features. Paper presented at the 2013 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference, APSIPA 2013.
+
+Tahon, M., Delaborde, A., & Devillers, L. (2011). Real-life emotion detection from speech in Human-Robot Interaction: Experiments across diverse corpora with child and adult voices, Florence.
+
+Testa, J. A., Beatty, W. W., Gleason, A. C., Orbelo, D. M., & Ross, E. D. (2001). Impaired affective prosody in AD: Relationship to aphasic deficits and emotional behaviors. Neurology, 57(8), 1474-1481. 
+
+Thönnessen, H., Boers, F., Dammers, J., Chen, Y. H., Norra, C., & Mathiak, K. (2010). Early sensory encoding of affective prosody: Neuromagnetic tomography of emotional category changes. NeuroImage, 50(1), 250-259. doi:10.1016/j.neuroimage.2009.11.082
+
+Toivanen, J., Väyrynen, E., & Seppänen, T. (2004). Automatic discrimination of emotion from spoken Finnish. Language and Speech, 47(4), 383-412. 
+Tompkins, C. A., & Flowers, C. R. (1985). Perception of emotional intonation by brain-damaged adults: The influence of task processing levels. Journal of Speech and Hearing Research, 28(4), 527-538. 
+
+Väyrynen, E., Toivanen, J., & Seppänen, T. (2011). Classification of emotion in spoken Finnish using vowel-length segments: Increasing reliability with a fusion technique. Speech Communication, 53(3), 269-282. doi:10.1016/j.specom.2010.09.007
+
+Ververidis, D., & Kotropoulos, C. (2006). Emotional speech recognition: Resources, features, and methods. Speech Communication, 48(9), 1162-1181. doi:10.1016/j.specom.2006.04.003
+
+Vlasenko, B., Prylipko, D., Böck, R., & Wendemuth, A. (2014). Modeling phonetic pattern variability in favor of the creation of robust emotion classifiers for real-life applications. Computer Speech and Language, 28(2), 483-500. 
+
+Vlckova-Mejvaldova, J., & Horák, P. (2011). The influence of individual prosodic parameters on the perception of emotions in Czech. Paper presented at the SPA 2011 - Signal Processing: Algorithms, Architectures, Arrangements, and Applications - Conference Proceedings.
+
+Vlckova-Mejvaldova, J., & Horák, P. (2011) Prosodic parameters of emotional synthetic speech in Czech: Perception validation. Vol. 7015 LNAI. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) (pp. 170-176).
+
+Waaramaa, T., & Kankare, E. (2013). Acoustic and EGG analyses of emotional utterances. Logopedics Phoniatrics Vocology, 38(1), 11-18. doi:10.3109/14015439.2012.679966
+
+Wakamatsu, Y., Kondo, T., & Ito, K. (2002). A computational emotion model based on the prosodic component of speech sounds. Paper presented at the Proceedings - IEEE International Conference on Robotics and Automation.
+
+Wang, L., & Bastiaansen, M. (2014). Oscillatory brain dynamics associated with the automatic processing of emotion in words. Brain and Language, 137, 120-129. 
+
+Wang, T., Ding, H., Kuang, J., & Ma, Q. (2014). Mapping emotions into acoustic space: The role of voice quality. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Wang, T., & Lee, Y. C. (2014). Does restriction of pitch variation affect the perception of vocal emotions in Mandarin Chinese? Journal of the Acoustical Society of America, 137(1), EL117-EL123. 
+
+Wen, M., Wang, M., Hirose, K., & Minematsu, N. (2011). Prosody conversion for emotional mandarin speech synthesis using the tone nucleus model, Florence.
+
+Wu, D., Parsons, T. D., & Narayanan, S. S. (2010). Acoustic feature analysis in speech emotion primitives estimation, Makuhari, Chiba.
+
+Wu, S., Falk, T. H., & Chan, W. Y. (2011). Automatic speech emotion recognition using modulation spectral features. Speech Communication, 53(5), 768-785. doi:10.1016/j.specom.2010.08.013
+
+Yakoumaki, T., Kafentzis, G. P., & Stylianou, Y. (2014). Emotional speech classification using adaptive sinusoidal modelling. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
+Yeh, L. Y., & Chi, T. S. (2010). Spectro-temporal modulations for robust speech emotion recognition, Makuhari, Chiba.
+
+Zbancioc, M., Teodorescu, H. N., & Feraru, M. (2011). Statistical characteristics of the formants of the Romanian vowels in emotional states. Paper presented at the Proceedings of the 6th International Conference on Speech Technology and Human-Computer Dialogue, SpeD 2011.
+
+Zhang, Z., Deng, J., Marchi, E., & Schuller, B. (2013). Active learning by label uncertainty for acoustic emotion recognition. Paper presented at the Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH.
+
